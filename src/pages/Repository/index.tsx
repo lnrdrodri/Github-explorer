@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 import logoImage from '../../assets/logo.svg';
 
-import { Header, RepositoryInfo, Issues } from './styles';
+import { Header, RepositoryInfo, Issues, Carregando } from './styles';
 
 interface RepositoryParams {
     repository: string;
@@ -73,7 +73,7 @@ const Repository: React.FC = () => {
                 </Link>
             </Header>
 
-            { repository && (
+            { repository ? (
                 <RepositoryInfo>
                     <header>
                         <img src={repository.owner.avatar_url} alt={repository.owner.login} />
@@ -97,6 +97,10 @@ const Repository: React.FC = () => {
                         </li>
                     </ul>
                 </RepositoryInfo>
+            ) : (
+                <Carregando>
+                    <div className="spinner"></div>
+                </Carregando>
             )}
 
             <Issues>

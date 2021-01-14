@@ -125,3 +125,35 @@ export const Issues = styled.div`
         }
     }
 `;
+
+export const Carregando = styled.div`
+    width: 100%;
+    z-index: 9999999;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .spinner {
+        /* border: 1rem solid #04D361; */
+        border-radius: 50%;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        animation: spin 0.5s alternate infinite;
+    }
+    
+    @keyframes spin {
+        0% {background-color: black; left: 0px; top: 0px;}
+        25% {background-color: #004600; top: 40px;}
+        50% {background-color: limegreen; top: 40px;}
+        75% {background-color: lime; top: 40px;}
+        100% {background-color: black; top: -150px;}
+    }
+`;
