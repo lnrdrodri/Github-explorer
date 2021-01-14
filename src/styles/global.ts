@@ -11,13 +11,13 @@ export default createGlobalStyle`
     }
 
     html {
-        height: 100%;
+        min-height: 100%;
+        height: auto;
     }
 
     body {
-        background:  url(${githubBackground}) no-repeat 70% top, linear-gradient(180deg, #F0F0F5, #CCC) no-repeat;
+        background:  url(${githubBackground}) no-repeat 70% top, linear-gradient(to bottom, #F0F0F5, #CCC);
         -webkit-font-smoothing: antialiased;
-        height: 100%;
     }
 
     body, input, button {
